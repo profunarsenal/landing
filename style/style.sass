@@ -1,0 +1,417 @@
+@import "fonts.scss"
+@import "null.scss"
+@import "variables.sass"
+
+body
+    font-family: "Suisse Int'l"
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: $black
+    min-width: 320px
+    min-height: 100%
+    background-color: $white
+
+.container
+    width: 1170px
+    margin: 0 auto
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+.main
+    flex: 1 1 auto
+
+// COMPONENTS
+.button
+    padding: 16px 32px
+    font-size: 20px
+    line-height: 32px
+    border-radius: 100px
+    min-width: 180px
+    &.small
+        padding: 12px 24px
+        font-size: 14px
+        font-weight: 450
+        line-height: 20px
+        border-radius: 100px
+        min-width: 120px
+        max-height: 44px
+    &.primary
+        background-color: $turquoise
+        color: $white
+    &.secondary
+        background-color: $cyan
+        color: $white
+    &.tertiary
+        color: $blue
+        border: 1px solid $blue
+        background-color: rgba($blue, 0.04)
+    &.icon-right
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 12px
+        padding: 16px 32px 16px 40px
+        margin: 0 auto
+
+.title
+    font-family: "RF Dewi"
+    font-size: 36px
+    font-weight: 600
+    line-height: 48px
+    letter-spacing: -0.72px
+
+.text-icon
+    vertical-align: middle
+    &.rotate-180
+        transform: rotate(180deg)
+
+.input
+    border-bottom: 1px solid rgba($gray-dark, 0.3)
+
+// HEADER
+.header
+    height: 80px
+    padding: 0 40px
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+
+.navigation
+    display: flex
+    gap: 40px
+    &__link
+        color: $black
+
+// SECTION-HOME
+.home
+    margin: 0 16px 16px 16px
+    border-radius: 40px
+    background-color: rgba($gray-light, 0.4)
+    &__body
+        max-width: 721px
+        padding: 134px 0
+        margin: 0 auto
+        text-align: center
+    &__title
+        margin-bottom: 20px
+        font-family: "RF Dewi Extended"
+        font-size: 72px
+        font-weight: 600
+        line-height: 80px
+    &__subtitle
+        margin-bottom: 44px
+        color: $gray-dark
+        font-size: 20px
+        line-height: 32px
+
+// SECTION-ADVANTAGES
+.advantages
+    padding: 72px 0
+    &__info
+        display: flex
+        justify-content: space-between
+        gap: 67px
+        margin-bottom: 64px
+    &__title
+        min-width: 535px
+    &__text
+        max-width: 298px
+        line-height: 146%
+        color: $gray-dark
+        + .advantages__text
+            margin-left: 5px
+        .text-icon
+            margin-right: 3px
+    &__cards
+        display: flex
+        gap: 12px
+    &__card
+        flex: 1 1 25%
+        padding: 20px
+        border-radius: 24px
+        &:nth-child(1)
+            background-color: $blue
+        &:nth-child(2)
+            background-color: $turquoise
+        &:nth-child(3)
+            background-color: $cyan
+        &:nth-child(4)
+            background-color: $purple
+    &__card-icon
+        margin-bottom: 48px
+    &__card-title
+        color: $white
+        font-family: "RF Dewi Condensed"
+        font-size: 24px
+        font-weight: 600
+        line-height: 28px
+
+// SECTION-PROJECTS
+.projects
+    padding: 72px 0
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__label
+        margin-bottom: 16px
+        padding: 12px 24px
+        font-size: 14px
+        line-height: 24px
+        color: $white
+        border-radius: 100px
+        background-color: $blue
+    &__title
+        max-width: 586px
+        margin-bottom: 16px
+        text-align: center
+    &__subtitle
+        max-width: 463px
+        margin-bottom: 64px
+        color: $gray-dark
+        text-align: center
+    &__cards
+        display: flex
+        flex-wrap: wrap
+        gap: 12px
+    &__card
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex: 1 1 32%
+        padding: 20px
+        height: 164px
+        border-radius: 24px
+        border: 0.5px solid $gray-light
+        background-color: rgba($gray-light, 0.2)
+        background-repeat: no-repeat
+        background-position: 117% 37%
+        &:nth-child(1)
+            background-image: url('../assets/img/background/up-graph.svg')
+        &:nth-child(2)
+            background-image: url('../assets/img/background/ball.svg')
+        &:nth-child(3)
+            background-image: url('../assets/img/background/chip.svg')
+        &:nth-child(4)
+            background-image: url('../assets/img/background/cart.svg')
+        &:nth-child(5)
+            background-image: url('../assets/img/background/graduated.svg')
+        &:nth-child(6)
+            background-image: url('../assets/img/background/telegram.svg')
+        &:nth-child(7)
+            background-image: url('../assets/img/background/dollar-refresh.svg')
+        &:nth-child(8)
+            background-image: url('../assets/img/background/bank-cards.svg')
+        &:nth-child(9)
+            background-image: url('../assets/img/background/chart.svg')
+    &__card-number
+        display: flex
+        align-items: center
+        justify-content: center
+        // margin-bottom: 40px
+        width: 56px
+        height: 56px
+        font-family: "RF Dewi Extended"
+        font-size: 28px
+        font-weight: 700
+        line-height: 44px
+        border-radius: 16px
+        background-color: $white
+        box-shadow: 0px 21px 34px 0px rgba($black, 0.06)
+    &__card-title
+        font-family: "RF Dewi Condensed"
+        font-size: 24px
+        font-weight: 600
+        line-height: 28px
+
+// SECTION-NEEDS
+.needs
+    padding: 72px 0
+    &__body
+        padding: 40px 56px 56px 56px
+        border-radius: 40px
+        background-color: $cyan
+    &__title
+        color: $white
+        text-align: center
+        margin-bottom: 64px
+    &__items
+        display: flex
+        flex-wrap: wrap
+        column-gap: 80px
+        row-gap: 48px
+    &__item
+        flex: 1 1 28%
+        padding-top: 8px
+    &__item-icon
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 72px
+        height: 72px
+        margin: 0 auto
+        border-radius: 20px
+        background-color: $white
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 74px
+            height: 74px
+            background-color: rgba($white, 0.2)
+            border-radius: 20px
+            transform: translate(-50%, -50%) rotate(45deg)
+    &__item-title
+        margin-top: 24px
+        color: $white
+        text-align: center
+
+// SECTION-WORK
+.work
+    padding: 72px 0 144px 0
+    &__title
+        margin-bottom: 16px
+        text-align: center
+    &__text
+        max-width: 578px
+        color: $gray-dark
+        text-align: center
+        margin: 0 auto 16px
+    &__payments
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 56px
+    &__payment
+        position: relative
+        width: 32px
+        height: 32px
+        margin-right: -10px
+        &:nth-child(1)
+            z-index: 6
+        &:nth-child(2)
+            z-index: 5
+        &:nth-child(3)
+            z-index: 4
+        &:nth-child(4)
+            z-index: 3
+        &:nth-child(5)
+            z-index: 2
+        &:nth-child(6)
+            z-index: 1
+    &__cards
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 12px
+    &__card
+        flex: 1 1 50%
+        padding: 16px 20px
+        border-radius: 24px
+        background-repeat: no-repeat
+        background-position: top right
+        &:first-child
+            background-color: $blue
+            background-image: url('../assets/img/bitcoin.svg')
+        &:last-child
+            background-color: $turquoise
+            background-image: url('../assets/img/ruble.svg')
+    &__card-title
+        margin-bottom: 48px
+        color: $white
+        font-family: "RF Dewi Condensed"
+        font-size: 24px
+        font-weight: 600
+        line-height: 28px
+    &__card-text
+        color: $white
+
+// SECTION-APPLICATION
+.application
+    padding: 72px 0
+    background-color: $blue
+    &__body
+        display: flex
+        align-items: flex-start
+        padding: 80px 104px
+        border-radius: 40px
+        background-color: $white
+        box-shadow: 0px 6px 34px 0px rgba($black, 0.12)
+    &__title
+        margin-bottom: 16px
+    &__text
+        color: $gray-dark
+        &:not(:last-child)
+            margin-bottom: 12px
+    &__socials
+        margin-top: 62px
+        display: inline-flex
+        flex-direction: column
+        gap: 8px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 10px
+        padding: 8px 16px
+        color: $black
+        border-radius: 100px
+        background: rgba($gray-light, 0.4)
+    &__form-group
+        display: flex
+        flex-direction: column
+        gap: 32px
+        margin-bottom: 40px
+    &__form-label
+        display: flex
+        flex-direction: column
+        font-family: "RF Dewi"
+        font-weight: 600
+    
+
+// FOOTER
+.footer
+    padding: 56px 0
+    &__body
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        gap: 196px
+    &__copy
+        margin-top: 64px
+        font-size: 14px
+        line-height: 20px
+    &__navigation
+        display: flex
+        gap: 148px
+    &__navigation-list
+        display: flex
+        flex-direction: column
+        gap: 12px
+    &__navigation-link
+        font-size: 14px
+        line-height: 20px
+        color: $black
+
+.socials
+    display: flex
+    justify-content: flex-end
+    gap: 8px
+    margin-bottom: 28px
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 44px
+        height: 44px
+        border-radius: 100px
+        border: 1px solid rgba($gray-light, 0.5)
