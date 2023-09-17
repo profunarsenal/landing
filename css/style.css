@@ -266,6 +266,7 @@ body {
   font-weight: 600;
   line-height: 24px;
   padding-bottom: 12px;
+  background-color: transparent;
 }
 .input__field::-webkit-input-placeholder {
   color: rgba(138, 142, 152, 0.4);
@@ -635,11 +636,11 @@ body {
 }
 .work__card:first-child {
   background-color: #3252FC;
-  background-image: url("../assets/img/bitcoin.svg");
+  background-image: url("../assets/img/background/bitcoin.svg");
 }
 .work__card:last-child {
   background-color: #1BD1D5;
-  background-image: url("../assets/img/ruble.svg");
+  background-image: url("../assets/img/background/ruble.svg");
 }
 .work__card-title {
   margin-bottom: 48px;
@@ -1172,6 +1173,9 @@ body {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 6px 34px 0px rgba(22, 24, 25, 0.12);
           box-shadow: 0px 6px 34px 0px rgba(22, 24, 25, 0.12);
+  background-image: url("../assets/img/background/spiral.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 0;
 }
 .application__info {
   max-width: 322px;
