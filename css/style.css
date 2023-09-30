@@ -418,14 +418,47 @@ body {
   font-size: 72px;
   font-weight: 600;
   line-height: 80px;
+  -webkit-animation: home-body 1s;
+          animation: home-body 1s;
 }
 .home__subtitle {
   margin-bottom: 44px;
   color: #8A8E98;
   font-size: 20px;
   line-height: 32px;
+  -webkit-animation: home-body 1s;
+          animation: home-body 1s;
+}
+.home .button {
+  -webkit-animation: home-body 1s;
+          animation: home-body 1s;
 }
 
+@-webkit-keyframes home-body {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes home-body {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 .bubble {
   position: absolute;
   z-index: 50;
@@ -433,25 +466,80 @@ body {
 .bubble-1 {
   top: 114px;
   left: -142px;
+  -webkit-animation: bubble 0.5s 1s both;
+          animation: bubble 0.5s 1s both;
 }
 .bubble-2 {
   bottom: 83px;
   right: -138px;
+  -webkit-animation: bubble 0.5s 3s both;
+          animation: bubble 0.5s 3s both;
 }
 .bubble-3 {
   bottom: 95px;
   right: -169px;
   z-index: 49;
+  -webkit-animation: bubble 0.5s 1.5s both;
+          animation: bubble 0.5s 1.5s both;
 }
 .bubble-4 {
   bottom: 107px;
   left: -248px;
+  -webkit-animation: bubble 0.5s 2.5s both;
+          animation: bubble 0.5s 2.5s both;
 }
 .bubble-5 {
   top: 110px;
   right: -235px;
+  -webkit-animation: bubble 0.5s 2s both;
+          animation: bubble 0.5s 2s both;
 }
 
+@-webkit-keyframes bubble {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bubble {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .advantages {
   padding: 72px 0;
 }

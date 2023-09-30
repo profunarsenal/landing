@@ -223,11 +223,23 @@ body
         font-size: 72px
         font-weight: 600
         line-height: 80px
+        animation: home-body 1s
     &__subtitle
         margin-bottom: 44px
         color: $gray-dark
         font-size: 20px
         line-height: 32px
+        animation: home-body 1s
+    .button
+        animation: home-body 1s
+
+@keyframes home-body
+    0%
+        transform: translateY(10%)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
 
 .bubble
     position: absolute
@@ -235,19 +247,38 @@ body
     &-1
         top: 114px
         left: -142px
+        animation: bubble 0.5s 1s both
     &-2
         bottom: 83px
         right: -138px
+        animation: bubble 0.5s 3s both
     &-3
         bottom: 95px
         right: -169px
         z-index: 49
+        animation: bubble 0.5s 1.5s both
     &-4
         bottom: 107px
         left: -248px
+        animation: bubble 0.5s 2.5s both
     &-5
         top: 110px
         right: -235px
+        animation: bubble 0.5s 2s both
+
+@keyframes bubble
+    0%
+        transform: translateY(-10%)
+        opacity: 0
+    25%
+        opacity: 1
+        transform: translateY(0)
+    50%
+        opacity: 1
+        transform: translateY(-5%)
+    100%
+        opacity: 1
+        transform: translateY(0)
 
 // SECTION-ADVANTAGES
 .advantages
