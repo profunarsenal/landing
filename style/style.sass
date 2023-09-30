@@ -26,12 +26,14 @@ body
 
 // COMPONENTS
 .button
+    position: relative
     padding: 16px 32px
     font-size: 20px
     line-height: 32px
     border-radius: 100px
     min-width: 180px
     transition: all 0.3s ease
+    overflow: hidden
     &.small
         padding: 12px 24px
         font-size: 14px
@@ -232,14 +234,17 @@ body
         animation: home-body 1s
     .button
         animation: home-body 1s
-
-@keyframes home-body
-    0%
-        transform: translateY(10%)
-        opacity: 0
-    100%
-        transform: translateY(0)
-        opacity: 1
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: -200%
+            height: 100%
+            width: 36px
+            transform: skewX(-45deg)
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 75%, rgba(255,255,255,0.1) 100%)
+            animation: flare 2.4s 3.5s infinite linear
+            pointer-events: none
 
 .bubble
     position: absolute
@@ -265,6 +270,20 @@ body
         top: 110px
         right: -235px
         animation: bubble 0.5s 2s both
+
+@keyframes home-body
+    0%
+        transform: translateY(10%)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes flare
+    0%
+        left: -200%
+    100%
+        left: 200%
 
 @keyframes bubble
     0%

@@ -143,6 +143,7 @@ body {
 }
 
 .button {
+  position: relative;
   padding: 16px 32px;
   font-size: 20px;
   line-height: 32px;
@@ -150,6 +151,7 @@ body {
   min-width: 180px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 .button.small {
   padding: 12px 24px;
@@ -433,32 +435,22 @@ body {
   -webkit-animation: home-body 1s;
           animation: home-body 1s;
 }
-
-@-webkit-keyframes home-body {
-  0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
+.home .button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  height: 100%;
+  width: 36px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), color-stop(25%, rgba(255, 255, 255, 0.2)), color-stop(50%, rgba(255, 255, 255, 0.4)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-animation: flare 2.4s 3.5s infinite linear;
+          animation: flare 2.4s 3.5s infinite linear;
+  pointer-events: none;
 }
 
-@keyframes home-body {
-  0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
 .bubble {
   position: absolute;
   z-index: 50;
@@ -495,6 +487,47 @@ body {
           animation: bubble 0.5s 2s both;
 }
 
+@-webkit-keyframes home-body {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes home-body {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flare {
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+@keyframes flare {
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
 @-webkit-keyframes bubble {
   0% {
     -webkit-transform: translateY(-10%);
@@ -517,7 +550,6 @@ body {
             transform: translateY(0);
   }
 }
-
 @keyframes bubble {
   0% {
     -webkit-transform: translateY(-10%);
