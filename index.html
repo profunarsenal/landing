@@ -11,24 +11,33 @@
         <header class="header">
             <div class="header__body">
                 <img class="logo" src="./assets/img/logo.svg" alt="logo">
-                <ul class="navigation">
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">О нас</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">Как работает</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">Методы</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">Поддержка</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#">Подключить</a>
-                    </li>
-                </ul>
-                <button class="button small tertiary">Войти</button>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">О нас</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Как работает</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Методы</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Поддержка</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Подключить</a>
+                        </li>
+                        <li class="navigation__item navigation__button">
+                            <button class="button small tertiary">Войти</button>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="burger">
+                    <img class="burger__menu" src="./assets/img/burger.svg" alt="menu">
+                    <img class="burger__close" src="./assets/img/close.svg" alt="close">
+                </button>
+                <button class="login button small tertiary">Войти</button>
             </div>
         </header>
 
@@ -36,13 +45,13 @@
             <section class="home">
                 <div class="container">
                     <div class="home__body">
-                        <h1 class="home__title">Принимайте <br> хай-риск платежи без рисков</h1>
+                        <h1 class="home__title">Принимайте <br class="br-1024"> хай-риск платежи без рисков</h1>
                         <p class="home__subtitle">
                             <span>Моментальный</span>
                             <img class="text-icon" src="./assets/img/lightning.svg" alt="icon">
                             <span>и безопасный</span>
                             <img class="text-icon" src="./assets/img/shield.svg" alt="icon">
-                            <span>приём фиатных <br> и криптоплатежей для вашего проекта</span>
+                            <span>приём фиатных <br class="br-1024"> и криптоплатежей для вашего проекта</span>
                         </p>
                         <button class="button primary icon-right">
                             <span>Начать работу</span>
@@ -62,7 +71,7 @@
             <section class="advantages">
                 <div class="container">
                     <div class="advantages__info">
-                        <h2 class="advantages__title title">RubPay — надёжный <br> и прозрачный платёжный шлюз для ваших средств</h2>
+                        <h2 class="advantages__title title">RubPay — надёжный <br class="br-1280"> и прозрачный платёжный шлюз для ваших средств</h2>
                         <p class="advantages__text">
                             <span>Наша платёжная система быстро интегрируется на ваш сайт</span>
                             <img class="text-icon" src="./assets/img/computer.svg" alt="icon">
@@ -75,25 +84,25 @@
                             <img class="text-icon" src="./assets/img/circle-arrow.svg" alt="icon">
                             <span>платежи фиатом и получать</span>
                             <img class="text-icon rotate-180" src="./assets/img/circle-arrow.svg" alt="icon">
-                            <span>их криптовалютой <br> от любого человека из&nbsp;России и Казахстана.</span>
+                            <span>их криптовалютой <br class="br-1280"> от любого человека из&nbsp;России и Казахстана.</span>
                         </p>
                     </div>
                     <ul class="advantages__cards">
                         <li class="advantages__card">
                             <img class="advantages__card-icon" src="./assets/img/gauge.svg" alt="icon">
-                            <p class="advantages__card-title">Подключение <br> от одного дня</p>
+                            <p class="advantages__card-title">Подключение <br class="br-1280"> от&nbsp;одного дня</p>
                         </li>
                         <li class="advantages__card">
                             <img class="advantages__card-icon" src="./assets/img/timer.svg" alt="icon">
-                            <p class="advantages__card-title">Быстрый приём <br> и вывод платежей</p>
+                            <p class="advantages__card-title">Быстрый приём <br class="br-1280"> и&nbsp;вывод платежей</p>
                         </li>
                         <li class="advantages__card">
                             <img class="advantages__card-icon" src="./assets/img/clockwise.svg" alt="icon">
-                            <p class="advantages__card-title">Online <br> поддержка 24/7</p>
+                            <p class="advantages__card-title">Online <br class="br-1024"> поддержка 24/7</p>
                         </li>
                         <li class="advantages__card">
                             <img class="advantages__card-icon" src="./assets/img/coins.svg" alt="icon">
-                            <p class="advantages__card-title">Разные способы <br> оплаты в одном месте</p>
+                            <p class="advantages__card-title">Разные способы <br class="br-1280"> оплаты в одном месте</p>
                         </li>
                     </ul>
                 </div>
@@ -136,7 +145,7 @@
                             </li>
                             <li class="projects__card">
                                 <span class="projects__card-number">8</span>
-                                <p class="projects__card-title">Международные <br> переводы</p>
+                                <p class="projects__card-title">Международные <br class="br-1280"> переводы</p>
                             </li>
                             <li class="projects__card">
                                 <span class="projects__card-number">9</span>
@@ -197,18 +206,18 @@
                 <div class="container">
                     <div class="work__body">
                         <h2 class="work__title title">Как это работает</h2>
-                        <p class="work__text">После подключения RubPay к вашему сайту или интернет-проекту ваши покупатели смогут оплатить товар или услугу удобным способом — <br> карта Visa, Mastercard или Maestro, СБП, а также электронным кошельком и криптовалютой.</p>
+                        <p class="work__text">После подключения RubPay к вашему сайту или интернет-проекту ваши покупатели смогут оплатить товар или услугу удобным способом — <br class="br-1024"> карта Visa, Mastercard или Maestro, СБП, а также электронным кошельком и криптовалютой.</p>
                         <div class="work__payments">
                             <img src="./assets/img/payments.svg" alt="payments">
                         </div>
                         <div class="work__cards">
                             <div class="work__card">
                                 <h6 class="work__card-title">Оплата в крипте</h6>
-                                <p class="work__card-text">Предоставьте клиенту возможность <br> платить сразу криптовалютой.</p>
+                                <p class="work__card-text">Предоставьте клиенту возможность <br class="br-1024"> платить сразу криптовалютой.</p>
                             </div>
                             <div class="work__card">
                                 <h6 class="work__card-title">Оплата в фиате</h6>
-                                <p class="work__card-text">Клиент может оплатить привычным ему «картой <br> онлайн», а вы мгновенно получить его платеж.</p>
+                                <p class="work__card-text">Клиент может оплатить привычным ему «картой <br class="br-1024"> онлайн», а вы мгновенно получить его платеж.</p>
                             </div>
                         </div>
                     </div>
@@ -241,7 +250,7 @@
                 <div class="container">
                     <div class="banner">
                         <div class="banner__info">
-                            <h2 class="banner__title title">Устали от «повисших» <br> платежей и блокировок счёта?</h2>
+                            <h2 class="banner__title title">Устали от «повисших» <br class="br-1280"> платежей и блокировок счёта?</h2>
                             <p class="banner__text">Избавьте себя от платёжных вопросов — делегируйте их нам. Сделайте свою бизнес-жизнь проще с помощью одной интеграции.</p>
                             <button class="button secondary icon-right">
                                 <span>Подключить RubPay</span>
@@ -262,7 +271,7 @@
                     <div class="channels__info">
                         <h2 class="channels__title">
                             <span class="title">Каналы приёма трафика</span>
-                            <span class="channels__subtitle">для проектов с хай-риск и лоу-риск <br> с индивидуальными процентами</span>
+                            <span class="channels__subtitle">для проектов с хай-риск и лоу-риск <br class="br-1280"> с индивидуальными процентами</span>
                         </h2>
                         <div class="channels__texts">
                             <p class="channels__text">Всё в одном месте. Сочетаем разные комфортные способы для обработки входящего трафика от клиентов.</p>
@@ -281,7 +290,7 @@
                                     <p class="channels__card-subtitle">Лимит</p>
                                     <p class="channels__card-value">
                                         <span>100₽ — 1,000,000₽</span>
-                                        <span>·</span>
+                                        <span class="dot">·</span>
                                         <span>3,000₸ — 2,000,000₸</span>
                                     </p>
                                 </div>
@@ -301,7 +310,7 @@
                                     <p class="channels__card-subtitle">Лимит</p>
                                     <p class="channels__card-value">
                                         <span>100₽ — 1,000,000₽</span>
-                                        <span>·</span>
+                                        <span class="dot">·</span>
                                         <span>3,000₸ — 2,000,000₸</span>
                                     </p>
                                 </div>
@@ -320,7 +329,7 @@
                                     <p class="channels__card-subtitle">Лимит</p>
                                     <p class="channels__card-value">
                                         <span>100₽ — 1,000,000₽</span>
-                                        <span>·</span>
+                                        <span class="dot">·</span>
                                         <span>3,000₸ — 2,000,000₸</span>
                                     </p>
                                 </div>
@@ -365,7 +374,7 @@
                                     <p class="channels__card-value">RU, KZ</p>
                                 </div>
                                 <div class="channels__card-item">
-                                    <p class="channels__card-subtitle">Метод интеграции</p>
+                                    <p class="channels__card-subtitle">Метод <br class="br-1024"> интеграции</p>
                                     <p class="channels__card-value">личная встреча</p>
                                 </div>
                                 <div class="channels__card-item">
@@ -389,7 +398,7 @@
                     <div class="payments__info">
                         <h2 class="payments__title">
                             <span class="title">Массовые быстрые выплаты</span>
-                            <span class="payments__subtitle">для проектов с хай-риск и лоу-риск <br> с индивидуальными процентами</span>
+                            <span class="payments__subtitle">для проектов с хай-риск и лоу-риск <br class="br-1280"> с индивидуальными процентами</span>
                         </h2>
                         <p class="payments__text">Работаем с разными платёжными системами для вывода средств. Выбирайте удобный способ и&nbsp;получайте выплаты в нужный срок.</p>
                     </div>
@@ -399,7 +408,10 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/yoomoney.svg" alt="icon">
-                                        <span>Yoomoney: 1 000₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">Yoomoney:</span>
+                                            1 000₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -414,7 +426,10 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/phone.svg" alt="icon">
-                                        <span>Моб счет: 1 000₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">Моб счет:</span>
+                                            1 000₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -429,11 +444,17 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/crypto.svg" alt="icon">
-                                        <span>TRC20: 1 000₽ — 100 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">TRC20:</span>
+                                            1 000₽ — 100 000 000₽
+                                        </span>
                                     </div>
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/trx.svg" alt="icon">
-                                        <span>TRX: 500₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">TRX:</span>
+                                            500₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -450,11 +471,17 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/fk-wallet.svg" alt="icon">
-                                        <span>FK Wallet: 1 000₽ — 100 000₽</span>
+                                        <span>
+                                            <span class="payments__name">FK Wallet:</span>
+                                            1 000₽ — 100 000₽
+                                        </span>
                                     </div>
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/piastrix.svg" alt="icon">
-                                        <span>Piastrix: 1 000₽ — 100 000₽</span>
+                                        <span>
+                                            <span class="payments__name">Piastrix:</span>
+                                            1 000₽ — 100 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -490,7 +517,10 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/sbp.svg" alt="icon">
-                                        <span>СБП: 100₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">СБП:</span>
+                                            100₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -507,7 +537,10 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/qiwi.svg" alt="icon">
-                                        <span>QIWI: 100₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">QIWI:</span>
+                                            100₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
@@ -522,15 +555,24 @@
                                 <div class="payments__systems">
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/mir.svg" alt="icon">
-                                        <span>МИР: 100₽ - 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">МИР:</span>
+                                            100₽ - 1 000 000₽
+                                        </span>
                                     </div>
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/mastercard.svg" alt="icon">
-                                        <span>MasterCard: 100₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">MasterCard:</span>
+                                            100₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                     <div class="payments__row">
                                         <img src="./assets/img/payments/visa.svg" alt="icon">
-                                        <span>Visa: 100₽ — 1 000 000₽</span>
+                                        <span>
+                                            <span class="payments__name">Visa:</span>
+                                            100₽ — 1 000 000₽
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="payments__row">
