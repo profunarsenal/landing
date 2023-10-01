@@ -250,6 +250,7 @@ body
 @media(max-width: 1024px)
     .navigation
         position: absolute
+        z-index: 99
         top: 60px
         right: 0
         opacity: 0
@@ -1531,33 +1532,33 @@ body
             margin-top: 0
 
 // Анимация
-// @keyframes home-body
-//     0%
-//         transform: translateY(10%)
-//         opacity: 0
-//     100%
-//         transform: translateY(0)
-//         opacity: 1
+@keyframes home-body
+    0%
+        transform: translateY(10%)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
 
-// @keyframes flare
-//     0%
-//         left: -200%
-//     100%
-//         left: 200%
+@keyframes flare
+    0%
+        left: -200%
+    100%
+        left: 200%
 
-// @keyframes bubble
-//     0%
-//         transform: translateY(-10%)
-//         opacity: 0
-//     25%
-//         opacity: 1
-//         transform: translateY(0)
-//     50%
-//         opacity: 1
-//         transform: translateY(-5%)
-//     100%
-//         opacity: 1
-//         transform: translateY(0)
+@keyframes bubble
+    0%
+        transform: translateY(-10%)
+        opacity: 0
+    25%
+        opacity: 1
+        transform: translateY(0)
+    50%
+        opacity: 1
+        transform: translateY(-5%)
+    100%
+        opacity: 1
+        transform: translateY(0)
 
 // Переносы
 br
