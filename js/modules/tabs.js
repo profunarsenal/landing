@@ -1,15 +1,13 @@
 export const tabsModule = () => {
-    const tabsBlock = document.querySelector('.example__tabs');
+    const tabsButtons = document.querySelectorAll('.example__tab-button');
 
-    tabsBlock.addEventListener('click', (e) => {
-        const tabsButtons = tabsBlock.querySelectorAll('.example__tab');
-
-        if (!e.target.classList.contains('active')) {
-            tabsButtons.forEach((tabsButton) => {
-                tabsButton.classList.remove('active');
+    tabsButtons.forEach((tabButton) => {
+        tabButton.addEventListener('click', () => {
+            tabsButtons.forEach((button) => {
+                button.parentElement.classList.remove('active');
             });
 
-            e.target.classList.add('active');
-        }
+            tabButton.parentElement.classList.add('active');
+        });
     });
 };
