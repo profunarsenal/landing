@@ -12,6 +12,9 @@ body
     min-height: 100%
     background-color: $white
 
+br
+    display: none
+
 .container
     width: 1170px
     margin: 0 auto
@@ -28,10 +31,14 @@ body
     .container
         width: 912px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .container
         width: 100%
         padding: 0 16px
+
+@media(max-width: 767px)
+    .main
+        overflow: hidden
 
 // COMPONENTS
 .button
@@ -102,11 +109,6 @@ body
     font-weight: 600
     line-height: 48px
     letter-spacing: -0.72px
-
-.text-icon
-    vertical-align: middle
-    &.rotate-180
-        transform: rotate(180deg)
 
 .banner
     display: flex
@@ -196,13 +198,11 @@ body
                 fill-opacity: 1
 
 @media(max-width: 1279px)
-    .text-icon
-        vertical-align: top
     .banner
         padding: 48px
         background-position: -70% 80%
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .banner
         flex-direction: column-reverse
         padding: 24px 24px 32px 24px
@@ -218,6 +218,28 @@ body
                 height: 200px
         .icon-right
             margin: 0 auto
+    .input__label
+        max-width: 420px
+
+@media(max-width: 767px)
+    .title
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: -0.48px
+    .banner
+        padding: 16px
+        background-position: 74% 56%
+        &__title
+            margin-top: 8px
+        &__image
+            img
+                width: 172px
+                height: 172px
+        &__text
+            font-size: 14px
+            line-height: 20px
+    .input__label
+        max-width: 100%
 
 // HEADER
 .header
@@ -247,7 +269,7 @@ body
 .burger
     display: none
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .navigation
         position: absolute
         z-index: 99
@@ -264,7 +286,7 @@ body
         transition: all 0.3s ease
         &.open
             top: 64px
-            right: 8px
+            right: 16px
             opacity: 1
             visibility: visible
             pointer-events: all
@@ -295,13 +317,17 @@ body
 
 @media(max-width: 767px)
     .navigation
-        top: 56px
+        &.open
+            top: 56px
+            right: 8px
         &__button
             display: block
-            > .button
+            > .login
                 min-width: 100%
-    .header .button
-        display: none
+    .header
+        padding: 0 20px
+        &__body > .login
+            display: none
 
 // SECTION-HOME
 .home
@@ -327,6 +353,22 @@ body
         font-size: 20px
         line-height: 32px
         animation: home-body 1s
+    &__text-icon
+        position: relative
+        display: inline-block
+        padding-right: 33px
+        &::after
+            position: absolute
+            top: 4px
+            right: 0
+            width: 27px
+            height: 27px
+        &.icon-lightning
+            &::after
+                content: url(../assets/img/lightning.svg)
+        &.icon-shield
+            &::after
+                content: url(../assets/img/shield.svg)
     .button
         animation: home-body 1s
         &::after
@@ -350,7 +392,7 @@ body
         animation: bubble 0.5s 1s both
     &-2
         bottom: 139px
-        right: -102px
+        right: -104px
         filter: drop-shadow(0px 21px 34px rgba(0, 0, 0, 0.06))
         animation: bubble 0.5s 3s both
     &-3
@@ -360,10 +402,10 @@ body
         animation: bubble 0.5s 1.5s both
     &-4
         bottom: 107px
-        left: -248px
+        left: -183px
         animation: bubble 0.5s 2.5s both
     &-5
-        top: 110px
+        top: 109px
         right: -235px
         animation: bubble 0.5s 2s both
 
@@ -385,7 +427,7 @@ body
             top: 104px
             right: -85px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .home
         &__body
             padding: 209px 0
@@ -411,7 +453,7 @@ body
 
 @media(max-width: 767px)
     .home
-        margin: 0 8px 8px 8px
+        margin: 0 8px 16px 8px
         &__body
             padding: 108px 0 106px
         &__title
@@ -421,19 +463,38 @@ body
             font-size: 16px
             line-height: 24px
             margin-bottom: 24px
+        &__text-icon
+            padding-right: 33px
+            &::after
+                top: 0
+                right: 0
+            &.icon-lightning
+                padding-right: 37px
+                &::after
+                    right: 5px
     .bubble
-        display: none
         &-1
+            width: 125px
+            height: 66px
             top: 34px
-            left: -24px
+            left: -31px
         &-2
-            bottom: -72px
-            right: -70px
+            width: 117px
+            height: 66px
+            bottom: -15px
+            right: -34px
         &-3
             display: none
         &-4
+            width: 174px
+            height: 66px
             bottom: 19px
             left: -30px
+        &-5
+            width: 182px
+            height: 66px
+            top: 11px
+            right: -47px
 
 @media(min-width: 1920px)
     .bubble
@@ -460,12 +521,32 @@ body
         min-width: 535px
     &__text
         max-width: 298px
-        line-height: 146%
+        line-height: 24px
         color: $gray-dark
         + .advantages__text
             margin-left: 5px
-        .text-icon
-            margin-right: 3px
+    &__text-icon
+        position: relative
+        display: inline-block
+        padding-right: 30px
+        &::after
+            position: absolute
+            top: 1px
+            right: 1px
+            width: 24px
+            height: 24px
+        &.icon-computer
+            &::after
+                content: url(../assets/img/computer.svg)
+        &.icon-phone
+            &::after
+                content: url(../assets/img/phone.svg)
+        &.icon-circle-arrow
+            &::after
+                content: url(../assets/img/circle-arrow.svg)
+        &.rotate
+            &::after
+                transform: rotate(180deg)
     &__cards
         display: flex
         gap: 12px
@@ -500,7 +581,7 @@ body
         &__title
             text-align: center
             max-width: 556px
-            margin-bottom: 33px
+            margin-bottom: 32px
         &__text
             max-width: 600px
             text-align: center
@@ -518,7 +599,7 @@ body
             max-height: 56px
             margin-bottom: 0
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .advantages
         padding: 40px 0
         &__info
@@ -528,8 +609,32 @@ body
         &__card
             flex: 1 1 49%
             min-height: 164px
-        &__card-title
-            max-width: 70%
+
+@media(max-width: 767px)
+    .advantages
+        &__info
+            margin-bottom: 32px
+            padding: 0 16px
+        &__title
+            max-width: none
+            min-width: auto
+        &__text
+            font-size: 14px
+            line-height: 20px
+            + .advantages__text
+                margin-top: 20px
+        &__text-icon
+            padding-right: 27px
+            &::after
+                top: -1px
+            &.icon-circle-arrow
+                top: 0
+                &:not(.rotate)
+                    padding-right: 0
+                    &::after
+                        right: -29px
+        &__card
+            min-height: 180px
 
 // SECTION-PROJECTS
 .projects
@@ -619,16 +724,61 @@ body
         padding: 64px 0
         &__card
             background-position: 127% 37%
-        &__card-title
-            max-width: 168px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .projects
         padding: 40px 0
         &__subtitle
             margin-bottom: 48px
         &__card
-            background-position: 145% 37%
+            background-position: 127% 37%
+
+@media(max-width: 860px)
+    .projects
+        &__card
+            background-position: 144% 37%
+
+@media(max-width: 767px)
+    .projects
+        &__subtitle
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 32px
+        &__cards
+            justify-content: center
+        &__card
+            flex: 0 1 49%
+            gap: 12px
+        &__card-title
+            font-size: 20px
+        &__card
+            background-position: 117% 37%
+
+@media(max-width: 640px)
+    .projects
+        &__card
+            flex: 0 1 45%
+            background-position: 136% 37%
+
+@media(max-width: 576px)
+    .projects
+        &__card
+            background-position: 146% 37%
+
+@media(max-width: 480px)
+    .projects
+        &__card
+            flex: 1 1 100%
+            background-position: 115% 37%
+
+@media(max-width: 360px)
+    .projects
+        &__title
+            max-width: 240px
+        &__subtitle
+            max-width: 260px
+        &__card
+            background-position: 128% 37%
 
 // SECTION-NEEDS
 .needs
@@ -680,7 +830,7 @@ body
         &__item
             flex: 1 1 18%
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .needs
         padding: 40px 0
         &__body
@@ -691,6 +841,29 @@ body
             column-gap: 32px
         &__item
             flex: 1 1 25%
+
+@media(max-width: 767px)
+    .needs
+        padding: 8px 0 32px
+        &__body
+            padding: 40px 16px 56px 16px
+        &__items
+            justify-content: center
+            row-gap: 40px
+        &__item
+            flex: 0 1 45%
+
+@media(max-width: 480px)
+    .needs
+        &__title
+            margin: 0 auto 32px
+        &__item
+            flex: 1 1 100%
+
+@media(max-width: 360px)
+    .needs
+        &__title
+            max-width: 200px
 
 // SECTION-WORK
 .work
@@ -737,7 +910,7 @@ body
     .work
         padding: 64px 0
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .work
         padding: 40px 0 80px 0
         &__payments
@@ -750,6 +923,22 @@ body
         &__card-title
             margin-bottom: 0
 
+@media(max-width: 767px)
+    .work
+        padding: 32px 0
+        &__text
+            font-size: 14px
+            line-height: 20px
+        &__payments
+            margin-bottom: 32px
+        &__cards
+            flex-direction: column
+        &__card
+            flex: 1 1 100%
+            min-height: auto
+            width: 100%
+        &__card-title
+            margin-bottom: 48px
 
 // SECTION-EXAMPLE
 .example
@@ -831,7 +1020,7 @@ body
         &__video
             height: 431px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .example
         padding: 40px 0
         &__title
@@ -844,14 +1033,15 @@ body
         &__tab
             &.active
                 .example__tab-video
-                    height: 348px
+                    position: relative
+                    height: 420px
                     width: 100%
                     opacity: 1
                     visibility: visible
                     pointer-events: all
-                    margin: 24px auto 12px
+                    margin: 24px auto 16px
         &__tab-video
-            position: relative
+            position: fixed
             display: flex
             align-items: center
             justify-content: center
@@ -868,29 +1058,74 @@ body
         &__video
             display: none
 
+@media(max-width: 992px)
+    .example
+        &__tab
+            &.active
+                .example__tab-video
+                    height: 348px
+
+@media(max-width: 767px)
+    .example
+        padding: 32px 0
+        &__title
+            text-align: left
+            margin-bottom: 32px
+        &__tab
+            &.active
+                .example__tab-video
+                    height: 260px
+                    margin: 20px auto 8px
+                    border-radius: 16px
+        &__icon-play
+            width: 56px
+            height: 56px
+
+@media(max-width: 576px)
+    .example
+        &__tab
+            &.active
+                .example__tab-video
+                    height: 180px
+
+@media(max-width: 360px)
+    .example
+        &__tab
+            &.active
+                .example__tab-video
+                    height: 136px
+
 // SECTION-CONNECTION-BANNER
 .connection-banner
     padding: 144px 0 72px
-    .banner
-        max-height: 440px
     .banner__text
         max-width: 400px
     .button
+        padding: 16px 28px 16px 40px
         min-width: 308px
 
 @media(max-width: 1279px)
     .connection-banner
         padding: 128px 0 64px
-        .banner
-            max-height: 376px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .connection-banner
         padding: 80px 0 40px
         .banner__text
             max-width: 570px
         .banner
             max-height: fit-content
+
+@media(max-width: 767px)
+    .connection-banner
+        padding: 64px 0 32px
+        .button
+            min-width: 100%
+
+@media(max-width: 360px)
+    .connection-banner
+        .button .not-mobile
+            display: none
 
 // SECTION-CHANNELS
 .channels
@@ -992,6 +1227,8 @@ body
             display: block
             margin: 0 auto
             max-width: 712px
+        &__card-items
+            justify-content: space-between
         &__card
             display: flex
             flex-direction: column
@@ -999,7 +1236,8 @@ body
             min-height: 252px
             &:nth-child(6)
                 .channels__card-item
-                    min-width: 120px
+                    min-width: 116px
+                    flex: 0 0 25%
         &__card-title
             margin: 0
         &__card-value
@@ -1008,13 +1246,45 @@ body
         .dot
             display: none
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .channels
         padding: 40px 0
         &__info
             margin-bottom: 64px
         &__card
             flex: 1 1 49%
+            &:nth-child(6)
+                .channels__card-item
+                    flex: 0 1 38%
+                    &:nth-child(even)
+                        flex: 1 1 auto
+
+@media(max-width: 767px)
+    .channels
+        padding: 32px 0
+        &__info
+            gap: 16px
+            margin-bottom: 48px
+        &__subtitle,
+        &__texts
+            font-size: 14px
+            line-height: 20px
+        &__card
+            &:nth-child(6)
+                .channels__card-item
+                    min-width: 100px
+                    flex: 1 1 45%
+                    &:nth-child(even)
+                        flex: 1 1 45%
+
+@media(max-width: 360px)
+    .channels
+        &__card
+            &:nth-child(6)
+                .channels__card-item
+                    flex: 0 1 30%
+                    &:nth-child(even)
+                        flex: 0 1 44%
 
 // SECTION-PAYMENTS
 .payments
@@ -1108,7 +1378,7 @@ body
         &__name
             display: block
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .payments
         padding: 40px 0
         &__info
@@ -1138,11 +1408,51 @@ body
             flex-direction: column
             gap: 0
 
+@media(max-width: 767px)
+    .payments
+        padding: 32px 0
+        &__info
+            gap: 16px
+            margin-bottom: 32px
+        &__subtitle,
+        &__text
+            font-size: 14px
+            line-height: 20px
+        &__table
+            flex-direction: column
+        &__column
+            align-items: center
+            &:nth-child(1)
+                .payments__item:nth-child(3)
+                    height: 228px
+                    .payments__row:nth-child(1)
+                            align-items: center
+            &:nth-child(2)
+                .payments__item:nth-child(1)
+                    height: 228px
+                .payments__item:nth-child(2)
+                    height: 176px
+                    .payments__row:nth-child(2)
+                            align-items: center
+            &:nth-child(3)
+                .payments__item:nth-child(2)
+                    height: 296px
+        &__item
+            min-width: 100%
+            height: 160px
+            padding: 20px
+        &__row-values
+            gap: 4px
+        &__row-value
+            flex-direction: row
+            gap: 8px
+
 // SECTION-CONFIDENCE-BANNER
 .confidence-banner
     padding: 72px 0
     .banner
         max-height: 464px
+        background-position: 114% 83%
     .banner__text
         display: flex
         flex-direction: column
@@ -1157,16 +1467,32 @@ body
         padding: 64px 0
         .banner
             max-height: 424px
+            background-position: -68% 91%
+        .banner__paragraph:nth-child(1),
+        .banner__paragraph:nth-child(2)
+            max-width: 460px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .confidence-banner
         padding: 40px 0
         .banner
             max-height: fit-content
+            background-position: 73% 97%
         .banner__paragraph
             margin: 0 auto
             &:nth-child(1)
-                max-width: 520px
+                max-width: 566px
+
+@media(max-width: 767px)
+    .confidence-banner
+        padding: 32px 0
+        .banner
+            background-position: 74% 79%
+        .banner__text
+            gap: 20px
+        .button
+            width: 100%
+            padding: 16px 18px 16px 24px
 
 // SECTION-PARTNERS
 .partners
@@ -1236,7 +1562,7 @@ body
         &__statistics-icon
             margin-bottom: 16px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .partners
         padding: 40px 0
         &__text
@@ -1244,6 +1570,9 @@ body
             max-width: 440px
         &__statistics
             flex: 0 0 263px
+
+@media (min-width: 768px) and (max-width: 1023px)
+    .partners
         &__card
             height: 118px
             &:nth-child(1) img
@@ -1282,6 +1611,21 @@ body
             &:nth-child(12) img
                 width: 103px
                 height: 25px
+
+@media(max-width: 767px)
+    .partners
+        padding: 40px 0 32px
+        &__text
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 32px
+        &__table
+            flex-direction: column
+        &__cards
+            flex-direction: column
+        &__card
+            flex: 1 1 100%
+            min-height: 129.66px
 
 // SECTION-SUPPORT
 .support
@@ -1348,7 +1692,7 @@ body
             min-width: auto
             max-height: fit-content
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .support
         padding: 40px 0 80px
         &__body
@@ -1378,6 +1722,30 @@ body
             text-align: center
             font-size: 14px
             line-height: 20px
+
+@media(max-width: 767px)
+    .support
+        padding: 32px 0 64px
+        &__body
+            gap: 40px
+        &__subtitle
+            font-size: 14px
+            line-height: 20px
+        &__links
+            flex-wrap: wrap
+            max-width: 240px
+            margin: 0 auto
+        &__suggestions
+            flex-direction: column
+        &__suggestion
+            font-size: 14px
+            line-height: 20px
+            min-height: fit-content
+
+@media(max-width: 480px)
+    .support
+        &__suggestion
+            padding: 16px
 
 // SECTION-APPLICATION
 .application
@@ -1437,7 +1805,7 @@ body
             padding: 48px
             gap: 94px
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .application
         padding: 40px 0
         &__body
@@ -1447,6 +1815,40 @@ body
             max-width: 282px
         &__subtitle
             margin-bottom: 116px
+
+@media(max-width: 767px)
+    .application
+        padding: 32px 0
+        &__body
+            flex-direction: column
+            gap: 48px
+        &__info
+            text-align: center
+            flex: 1 1 100%
+            width: 100%
+        &__links
+            flex-direction: row
+        &__subtitle
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 32px
+        &__agreement
+            text-align: center
+            max-width: 100%
+        .button
+            margin: 0 auto
+
+@media(max-width: 576px)
+    .application
+        &__body
+            padding: 24px 16px
+        &__links
+            flex-direction: column
+        .button
+            min-width: 100%
+            padding: 16px 32px
+            svg
+                display: none
 
 // FOOTER
 .footer
@@ -1516,7 +1918,7 @@ body
     .footer__navigation
         gap: 0
 
-@media(max-width: 1024px)
+@media(max-width: 1023px)
     .footer
         padding: 80px 16px 40px
         &__body
@@ -1530,6 +1932,38 @@ body
             padding: 0
         &__copy
             margin-top: 0
+
+@media(max-width: 767px)
+    .footer
+        padding: 56px 0 32px
+        &__body
+            row-gap: 32px
+        &__info
+            flex-direction: column
+            align-items: flex-start
+            gap: 12px
+        &__navigation
+            flex: 1 1 100%
+            gap: 12px
+        
+    .socials
+        justify-content: flex-start
+
+@media(max-width: 576px)
+    .footer
+        &__navigation
+            flex-direction: column
+        &__buttons
+            flex: 1
+            .button
+                min-width: 100%
+    
+    .socials
+        margin-bottom: 12px
+        justify-content: space-between
+        &__link
+            flex: 1
+            height: 40px
 
 // Анимация
 @keyframes home-body
@@ -1561,25 +1995,50 @@ body
         transform: translateY(0)
 
 // Переносы
-br
-    display: none
+.br
+    display: block
+
+@media(max-width: 1025px)
+    .br-max-1025
+        display: block
+
+@media(max-width: 400px)
+    .br-max-400
+        display: block
+
+@media(max-width: 360px)
+    .br-max-360
+        display: block
+
+@media(max-width: 767px)
+    .br-max-767
+        display: block
+
+@media(max-width: 1025px)
+    .br-max-1025
+        display: block
+
+@media(min-width: 767px)
+    .br-min-767
+        display: block
+
+@media(min-width: 1023px)
+    .br-min-1023
+        display: block
 
 @media(min-width: 1280px)
-    .br-1280
+    .br-min-1280
         display: block
 
-@media(min-width: 1024px)
-    .br-1024
+@media(min-width: 1026px)
+    .br-min-1026
         display: block
 
-@media(min-width: 768px)
-    .br-768
+@media (min-width: 480px) and (max-width: 768px)
+    .br-min-480-max-768
         display: block
 
-@media (min-width: 1024px) and (max-width: 1279px)
-    .br-1024-1279
-        display: block
-
+// Сброс обводки
 *
     -webkit-touch-callout: none
     -webkit-text-size-adjust: none
