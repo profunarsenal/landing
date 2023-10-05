@@ -222,6 +222,15 @@ br
                 fill: $cyan
                 fill-opacity: 1
 
+.spinner-wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.spinner
+    animation: rotation 1s linear infinite
+
 @media(max-width: 1279px)
     .banner
         padding: 48px
@@ -2104,6 +2113,12 @@ br
     100%
         opacity: 1
         transform: translateY(0)
+
+@keyframes rotation
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
 
 // Переносы
 .br

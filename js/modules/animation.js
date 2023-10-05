@@ -1,5 +1,9 @@
 export const animationModule = () => {
+    const spinner = document.querySelector('.spinner');
+
     window.onload = () => {
+        spinner.style.display = 'none';
+
         const startedScreenElements = document.querySelectorAll('.home .anim');
         const targetElements = document.querySelectorAll('.anim');
     
