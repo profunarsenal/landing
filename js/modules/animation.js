@@ -7,6 +7,7 @@ export const animationModule = () => {
             root: null,
             rootMargin: '5px',
             threshold: 0.5,
+            delay: 300,
         };
 
         const callback = (entries, observer) => {
