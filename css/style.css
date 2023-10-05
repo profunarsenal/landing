@@ -244,6 +244,22 @@ br {
 .button.icon-right.small {
   padding: 12px 20px 12px 24px;
 }
+.button.flare::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  height: 100%;
+  width: 36px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(11px);
+          filter: blur(11px);
+  -webkit-animation: flare 2.4s 3.5s infinite linear;
+          animation: flare 2.4s 3.5s infinite linear;
+  pointer-events: none;
+}
 
 .title {
   font-family: "RF Dewi";
@@ -438,8 +454,11 @@ br {
   }
 }
 .header {
+  z-index: 999;
   height: 80px;
   padding: 0 40px;
+  background-color: #FFFFFF;
+  width: 100%;
 }
 .header__body {
   display: -webkit-box;
@@ -480,6 +499,11 @@ br {
 }
 
 @media (max-width: 1023px) {
+  .header.scroll {
+    position: fixed;
+    -webkit-box-shadow: 0px 21px 34px 0px rgba(22, 24, 25, 0.06);
+            box-shadow: 0px 21px 34px 0px rgba(22, 24, 25, 0.06);
+  }
   .navigation {
     position: absolute;
     z-index: 99;
@@ -609,21 +633,6 @@ br {
 .home .button {
   -webkit-animation: home-body 1s;
           animation: home-body 1s;
-}
-.home .button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -200%;
-  height: 100%;
-  width: 36px;
-  -webkit-transform: skewX(-45deg);
-          transform: skewX(-45deg);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), color-stop(25%, rgba(255, 255, 255, 0.2)), color-stop(50%, rgba(255, 255, 255, 0.4)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.1)));
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.1) 100%);
-  -webkit-animation: flare 2.4s 3.5s infinite linear;
-          animation: flare 2.4s 3.5s infinite linear;
-  pointer-events: none;
 }
 
 .bubble {
