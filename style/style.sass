@@ -138,11 +138,20 @@ br
     background-image: url('../assets/img/banner/background.svg')
     background-repeat: no-repeat
     background-position: 114% 77%
+    &.animated
+        animation: bottom-top 0.8s both
     &__title
         margin-bottom: 16px
+        &.animated
+            animation: bottom-top 0.8s both
     &__text
         color: $gray-dark
         margin-bottom: 32px
+        &.animated
+            animation: bottom-top 0.8s both
+    &__image
+        &.animated
+            animation: bottom-top 0.8s both
     .icon-right
         margin: 0
 
@@ -498,11 +507,15 @@ br
             height: 66px
             top: 34px
             left: -31px
+            &.animated
+                animation: bubble 0.6s 0.8s both
         &-2
             width: 117px
             height: 66px
             bottom: -15px
             right: -34px
+            &.animated
+                animation: bubble 0.6s 3.2s both
         &-3
             display: none
         &-4
@@ -510,11 +523,15 @@ br
             height: 66px
             bottom: 19px
             left: -30px
+            &.animated
+                animation: bubble 0.6s 2.4s both
         &-5
             width: 182px
             height: 66px
             top: 11px
             right: -47px
+            &.animated
+                animation: bubble 0.6s 1.6s both
 
 @media(min-width: 1920px)
     .bubble
@@ -825,6 +842,8 @@ br
         color: $white
         text-align: center
         margin-bottom: 64px
+        &.animated
+            animation: bottom-top 0.8s both
     &__items
         display: flex
         flex-wrap: wrap
@@ -833,6 +852,8 @@ br
     &__item
         flex: 1 1 28%
         padding-top: 8px
+        &.animated
+            animation: bottom-top 0.8s both
     &__item-icon
         position: relative
         display: flex
@@ -905,14 +926,20 @@ br
     &__title
         margin-bottom: 16px
         text-align: center
+        &.animated
+            animation: bottom-top 0.8s both
     &__text
         max-width: 578px
         color: $gray-dark
         text-align: center
         margin: 0 auto 16px
+        &.animated
+            animation: bottom-top 0.8s both
     &__payments
         text-align: center
         margin-bottom: 56px
+        &.animated
+            animation: bottom-top 0.8s both
     &__cards
         display: flex
         align-items: center
@@ -924,6 +951,8 @@ br
         border-radius: 24px
         background-repeat: no-repeat
         background-position: top right
+        &.animated
+            animation: bottom-top 0.8s both
         &:first-child
             background-color: $blue
             background-image: url('../assets/img/background/bitcoin.svg')
@@ -980,11 +1009,15 @@ br
     background-color: rgba($gray-light, 0.2)
     &__title
         margin-bottom: 64px
+        &.animated
+            animation: bottom-top 0.8s both
     &__tabs
         display: flex
         justify-content: space-between
         gap: 24px
         margin-bottom: 40px
+        &.animated
+            animation: bottom-top 0.8s both
     &__tab
         flex: 1 1 25%
         position: relative
@@ -1033,6 +1066,8 @@ br
         border-radius: 32px
         border: 1px solid rgba($gray-dark, 0.2)
         background-color: rgba($gray-light, 0.5)
+        &.animated
+            animation: bottom-top 0.8s both
     &__video-button
         position: absolute
         top: 50%
@@ -1137,6 +1172,8 @@ br
     .button
         padding: 16px 28px 16px 40px
         min-width: 308px
+        &.animated
+            animation: bottom-top 0.8s both
 
 @media(max-width: 1279px)
     .connection-banner
@@ -1170,6 +1207,8 @@ br
         margin-bottom: 80px
     &__title
         margin-right: auto
+        &.animated
+            animation: bottom-top 0.8s both
     &__subtitle
         display: block
         margin-top: 12px
@@ -1181,6 +1220,8 @@ br
         padding-top: 8px
         max-width: 262px
         color: $gray-dark
+        &.animated
+            animation: bottom-top 0.8s both
     &__cards
         display: flex
         flex-wrap: wrap
@@ -1192,6 +1233,8 @@ br
         padding: 24px 20px 16px 20px
         border-radius: 24px
         background-color: $gray-light
+        &.animated
+            animation: bottom-top 0.8s both
         &:nth-child(1)
             background-color: $blue
         &:nth-child(2)
@@ -1327,6 +1370,9 @@ br
         display: flex
         justify-content: space-between
         margin-bottom: 72px
+    &__title
+        &.animated
+            animation: bottom-top 0.8s both
     &__subtitle
         display: block
         margin-top: 12px
@@ -1335,6 +1381,8 @@ br
         margin-right: 92px
         max-width: 290px
         color: $gray-dark
+        &.animated
+            animation: bottom-top 0.8s both
     &__table
         display: flex
         gap: 12px
@@ -1361,6 +1409,8 @@ br
         border-radius: 24px
         border: 0.5px solid $gray-light
         background-color: rgba($gray-light, 0.2)
+        &.animated
+            animation: bottom-top 0.8s both
     &__systems
         display: flex
         flex-direction: column
@@ -1495,6 +1545,9 @@ br
         max-width: 564px
     .banner__paragraph:nth-child(2)
         max-width: 478px
+    .button
+        &.animated
+            animation: bottom-top 0.8s both
 
 @media(max-width: 1279px)
     .confidence-banner
@@ -1534,10 +1587,14 @@ br
     &__title
         margin-bottom: 16px
         text-align: center
+        &.animated
+            animation: bottom-top 0.8s both
     &__text
         margin-bottom: 64px
         color: $gray-dark
         text-align: center
+        &.animated
+            animation: bottom-top 0.8s both
     &__table
         display: flex
         gap: 12px
@@ -1560,9 +1617,13 @@ br
         border-radius: 20px
         border: 0.5px solid $gray-light
         background-color: rgba($gray-light, 0.2)
+        &.animated
+            animation: bottom-top 0.8s both
     &__statistics-item
         padding: 20px
         border-radius: 24px
+        &.animated
+            animation: bottom-top 0.8s both
         &:nth-child(1)
             background-color: $blue
         &:nth-child(2)
@@ -1672,13 +1733,19 @@ br
     &__title
         margin-bottom: 16px
         max-width: 466px
+        &.animated
+            animation: bottom-top 0.8s both
     &__subtitle
         margin-bottom: 24px
         max-width: 313px
         color: $gray-dark
+        &.animated
+            animation: bottom-top 0.8s both
     &__links
         display: flex
         gap: 8px
+        &.animated
+            animation: bottom-top 0.8s both
     &__link
         display: flex
         align-items: center
@@ -1697,6 +1764,8 @@ br
         border-radius: 24px
         outline: 0.5px solid $gray-light
         background-color: rgba($gray-light, 0.2)
+        &.animated
+            animation: bottom-top 0.8s both
         &:nth-child(1)
             .support__suggestion-icon
                 background-color: $cyan
@@ -1801,20 +1870,28 @@ br
         flex: 0 0 322px
     &__form
         flex: 1 1 auto
+        &.animated
+            animation: bottom-top 0.8s both
         .icon-right
             margin: 0
     &__title
         margin-bottom: 16px
+        &.animated
+            animation: bottom-top 0.8s both
     &__subtitle
         color: $gray-dark
         display: flex
         flex-direction: column
         gap: 12px
         margin-bottom: 98px
+        &.animated
+            animation: bottom-top 0.8s both
     &__links
         display: inline-flex
         flex-direction: column
         gap: 8px
+        &.animated
+            animation: bottom-top 0.8s both
     &__link
         display: flex
         align-items: center

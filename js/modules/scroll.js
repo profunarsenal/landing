@@ -11,6 +11,8 @@ export const scrollModule = () => {
             const hasScrollClass = header.classList.contains('scroll');
             const id = link.getAttribute('href');
             const section = document.querySelector(id);
+            const burgerButton = document.querySelector('.burger');
+            const navigation = document.querySelector('.navigation');
 
             if (section) {
                 const topOffset = hasScrollClass ? header.offsetHeight : header.offsetHeight * 2;
@@ -21,6 +23,9 @@ export const scrollModule = () => {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
+
+                burgerButton.classList.remove('open');
+                navigation.classList.remove('open');
             }
         });
     });

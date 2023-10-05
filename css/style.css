@@ -292,12 +292,28 @@ br {
   background-repeat: no-repeat;
   background-position: 114% 77%;
 }
+.banner.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .banner__title {
   margin-bottom: 16px;
+}
+.banner__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .banner__text {
   color: #8A8E98;
   margin-bottom: 32px;
+}
+.banner__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
+.banner__image.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .banner .icon-right {
   margin: 0;
@@ -777,11 +793,19 @@ br {
     top: 34px;
     left: -31px;
   }
+  .bubble-1.animated {
+    -webkit-animation: bubble 0.6s 0.8s both;
+            animation: bubble 0.6s 0.8s both;
+  }
   .bubble-2 {
     width: 117px;
     height: 66px;
     bottom: -15px;
     right: -34px;
+  }
+  .bubble-2.animated {
+    -webkit-animation: bubble 0.6s 3.2s both;
+            animation: bubble 0.6s 3.2s both;
   }
   .bubble-3 {
     display: none;
@@ -792,11 +816,19 @@ br {
     bottom: 19px;
     left: -30px;
   }
+  .bubble-4.animated {
+    -webkit-animation: bubble 0.6s 2.4s both;
+            animation: bubble 0.6s 2.4s both;
+  }
   .bubble-5 {
     width: 182px;
     height: 66px;
     top: 11px;
     right: -47px;
+  }
+  .bubble-5.animated {
+    -webkit-animation: bubble 0.6s 1.6s both;
+            animation: bubble 0.6s 1.6s both;
   }
 }
 @media (min-width: 1920px) {
@@ -1254,6 +1286,10 @@ br {
   text-align: center;
   margin-bottom: 64px;
 }
+.needs__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .needs__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1270,6 +1306,10 @@ br {
       -ms-flex: 1 1 28%;
           flex: 1 1 28%;
   padding-top: 8px;
+}
+.needs__item.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .needs__item-icon {
   position: relative;
@@ -1378,15 +1418,27 @@ br {
   margin-bottom: 16px;
   text-align: center;
 }
+.work__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .work__text {
   max-width: 578px;
   color: #8A8E98;
   text-align: center;
   margin: 0 auto 16px;
 }
+.work__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .work__payments {
   text-align: center;
   margin-bottom: 56px;
+}
+.work__payments.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .work__cards {
   display: -webkit-box;
@@ -1408,6 +1460,10 @@ br {
   border-radius: 24px;
   background-repeat: no-repeat;
   background-position: top right;
+}
+.work__card.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .work__card:first-child {
   background-color: #3252FC;
@@ -1493,6 +1549,10 @@ br {
 .example__title {
   margin-bottom: 64px;
 }
+.example__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .example__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1502,6 +1562,10 @@ br {
           justify-content: space-between;
   gap: 24px;
   margin-bottom: 40px;
+}
+.example__tabs.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .example__tab {
   -webkit-box-flex: 1;
@@ -1558,6 +1622,10 @@ br {
   border-radius: 32px;
   border: 1px solid rgba(138, 142, 152, 0.2);
   background-color: rgba(229, 230, 232, 0.5);
+}
+.example__video.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .example__video-button {
   position: absolute;
@@ -1687,6 +1755,10 @@ br {
   padding: 16px 28px 16px 40px;
   min-width: 308px;
 }
+.connection-banner .button.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 
 @media (max-width: 1279px) {
   .connection-banner {
@@ -1734,6 +1806,10 @@ br {
 .channels__title {
   margin-right: auto;
 }
+.channels__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .channels__subtitle {
   display: block;
   margin-top: 12px;
@@ -1751,6 +1827,10 @@ br {
   padding-top: 8px;
   max-width: 262px;
   color: #8A8E98;
+}
+.channels__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .channels__cards {
   display: -webkit-box;
@@ -1771,6 +1851,10 @@ br {
   padding: 24px 20px 16px 20px;
   border-radius: 24px;
   background-color: #E5E6E8;
+}
+.channels__card.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .channels__card:nth-child(1) {
   background-color: #3252FC;
@@ -1984,6 +2068,10 @@ br {
           justify-content: space-between;
   margin-bottom: 72px;
 }
+.payments__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .payments__subtitle {
   display: block;
   margin-top: 12px;
@@ -1993,6 +2081,10 @@ br {
   margin-right: 92px;
   max-width: 290px;
   color: #8A8E98;
+}
+.payments__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .payments__table {
   display: -webkit-box;
@@ -2038,6 +2130,10 @@ br {
   border-radius: 24px;
   border: 0.5px solid #E5E6E8;
   background-color: rgba(229, 230, 232, 0.2);
+}
+.payments__item.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .payments__systems {
   display: -webkit-box;
@@ -2246,6 +2342,10 @@ br {
 .confidence-banner .banner__paragraph:nth-child(2) {
   max-width: 478px;
 }
+.confidence-banner .button.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 
 @media (max-width: 1279px) {
   .confidence-banner {
@@ -2299,10 +2399,18 @@ br {
   margin-bottom: 16px;
   text-align: center;
 }
+.partners__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .partners__text {
   margin-bottom: 64px;
   color: #8A8E98;
   text-align: center;
+}
+.partners__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .partners__table {
   display: -webkit-box;
@@ -2352,9 +2460,17 @@ br {
   border: 0.5px solid #E5E6E8;
   background-color: rgba(229, 230, 232, 0.2);
 }
+.partners__card.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .partners__statistics-item {
   padding: 20px;
   border-radius: 24px;
+}
+.partners__statistics-item.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .partners__statistics-item:nth-child(1) {
   background-color: #3252FC;
@@ -2521,16 +2637,28 @@ br {
   margin-bottom: 16px;
   max-width: 466px;
 }
+.support__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .support__subtitle {
   margin-bottom: 24px;
   max-width: 313px;
   color: #8A8E98;
+}
+.support__subtitle.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .support__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+}
+.support__links.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .support__link {
   display: -webkit-box;
@@ -2563,6 +2691,10 @@ br {
   border-radius: 24px;
   outline: 0.5px solid #E5E6E8;
   background-color: rgba(229, 230, 232, 0.2);
+}
+.support__suggestion.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .support__suggestion:nth-child(1) .support__suggestion-icon {
   background-color: #42B8EB;
@@ -2734,11 +2866,19 @@ br {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+.application__form.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .application__form .icon-right {
   margin: 0;
 }
 .application__title {
   margin-bottom: 16px;
+}
+.application__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .application__subtitle {
   color: #8A8E98;
@@ -2752,6 +2892,10 @@ br {
   gap: 12px;
   margin-bottom: 98px;
 }
+.application__subtitle.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .application__links {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2761,6 +2905,10 @@ br {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+}
+.application__links.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .application__link {
   display: -webkit-box;
