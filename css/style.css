@@ -146,6 +146,10 @@ br {
           flex: 1 1 auto;
 }
 
+.anim {
+  opacity: 0;
+}
+
 @media (max-width: 1279px) {
   .container {
     width: 912px;
@@ -601,16 +605,20 @@ br {
   font-size: 72px;
   font-weight: 600;
   line-height: 80px;
-  -webkit-animation: home-body 1s;
-          animation: home-body 1s;
+}
+.home__title.animated {
+  -webkit-animation: bottom-top 0.6s both;
+          animation: bottom-top 0.6s both;
 }
 .home__subtitle {
   margin-bottom: 44px;
   color: #8A8E98;
   font-size: 20px;
   line-height: 32px;
-  -webkit-animation: home-body 1s;
-          animation: home-body 1s;
+}
+.home__subtitle.animated {
+  -webkit-animation: bottom-top 0.6s both;
+          animation: bottom-top 0.6s both;
 }
 .home__text-icon {
   position: relative;
@@ -630,9 +638,9 @@ br {
 .home__text-icon.icon-shield::after {
   content: url(../assets/img/shield.svg);
 }
-.home .button {
-  -webkit-animation: home-body 1s;
-          animation: home-body 1s;
+.home .button.animated {
+  -webkit-animation: bottom-top 0.6s both;
+          animation: bottom-top 0.6s both;
 }
 
 .bubble {
@@ -642,35 +650,45 @@ br {
 .bubble-1 {
   top: 114px;
   left: -142px;
-  -webkit-animation: bubble 0.5s 1s both;
-          animation: bubble 0.5s 1s both;
+}
+.bubble-1.animated {
+  -webkit-animation: bubble 0.6s 0.8s both;
+          animation: bubble 0.6s 0.8s both;
 }
 .bubble-2 {
   bottom: 139px;
   right: -104px;
   -webkit-filter: drop-shadow(0px 21px 34px rgba(0, 0, 0, 0.06));
           filter: drop-shadow(0px 21px 34px rgba(0, 0, 0, 0.06));
-  -webkit-animation: bubble 0.5s 3s both;
-          animation: bubble 0.5s 3s both;
+}
+.bubble-2.animated {
+  -webkit-animation: bubble 0.6s 4s both;
+          animation: bubble 0.6s 4s both;
 }
 .bubble-3 {
   bottom: 95px;
   right: -169px;
   z-index: 49;
-  -webkit-animation: bubble 0.5s 1.5s both;
-          animation: bubble 0.5s 1.5s both;
+}
+.bubble-3.animated {
+  -webkit-animation: bubble 0.6s 1.6s both;
+          animation: bubble 0.6s 1.6s both;
 }
 .bubble-4 {
   bottom: 107px;
   left: -183px;
-  -webkit-animation: bubble 0.5s 2.5s both;
-          animation: bubble 0.5s 2.5s both;
+}
+.bubble-4.animated {
+  -webkit-animation: bubble 0.6s 3.2s both;
+          animation: bubble 0.6s 3.2s both;
 }
 .bubble-5 {
   top: 109px;
   right: -235px;
-  -webkit-animation: bubble 0.5s 2s both;
-          animation: bubble 0.5s 2s both;
+}
+.bubble-5.animated {
+  -webkit-animation: bubble 0.6s 2.4s both;
+          animation: bubble 0.6s 2.4s both;
 }
 
 @media (max-width: 1279px) {
@@ -814,10 +832,18 @@ br {
 .advantages__title {
   min-width: 535px;
 }
+.advantages__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .advantages__text {
   max-width: 298px;
   line-height: 24px;
   color: #8A8E98;
+}
+.advantages__text.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .advantages__text + .advantages__text {
   margin-left: 5px;
@@ -859,6 +885,10 @@ br {
           flex: 1 1 25%;
   padding: 20px;
   border-radius: 24px;
+}
+.advantages__card.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .advantages__card:nth-child(1) {
   background-color: #3252FC;
@@ -1014,16 +1044,28 @@ br {
   border-radius: 100px;
   background-color: #3252FC;
 }
+.projects__label.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .projects__title {
   max-width: 586px;
   margin-bottom: 16px;
   text-align: center;
+}
+.projects__title.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .projects__subtitle {
   max-width: 463px;
   margin-bottom: 64px;
   color: #8A8E98;
   text-align: center;
+}
+.projects__subtitle.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .projects__cards {
   display: -webkit-box;
@@ -1056,6 +1098,10 @@ br {
   background-position: 117% 37%;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+}
+.projects__card.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
 }
 .projects__card:hover {
   background-position: 96% 37%;
@@ -3016,7 +3062,7 @@ br {
     height: 40px;
   }
 }
-@-webkit-keyframes home-body {
+@-webkit-keyframes bottom-top {
   0% {
     -webkit-transform: translateY(10%);
             transform: translateY(10%);
@@ -3028,7 +3074,7 @@ br {
     opacity: 1;
   }
 }
-@keyframes home-body {
+@keyframes bottom-top {
   0% {
     -webkit-transform: translateY(10%);
             transform: translateY(10%);

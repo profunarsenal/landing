@@ -27,6 +27,9 @@ br
 .main
     flex: 1 1 auto
 
+.anim
+    opacity: 0
+
 @media(max-width: 1279px)
     .container
         width: 912px
@@ -366,13 +369,15 @@ br
         font-size: 72px
         font-weight: 600
         line-height: 80px
-        animation: home-body 1s
+        &.animated
+            animation: bottom-top 0.6s both
     &__subtitle
         margin-bottom: 44px
         color: $gray-dark
         font-size: 20px
         line-height: 32px
-        animation: home-body 1s
+        &.animated
+            animation: bottom-top 0.6s both
     &__text-icon
         position: relative
         display: inline-block
@@ -390,7 +395,8 @@ br
             &::after
                 content: url(../assets/img/shield.svg)
     .button
-        animation: home-body 1s
+        &.animated
+            animation: bottom-top 0.6s both
 
 .bubble
     position: absolute
@@ -398,25 +404,30 @@ br
     &-1
         top: 114px
         left: -142px
-        animation: bubble 0.5s 1s both
+        &.animated
+            animation: bubble 0.6s 0.8s both
     &-2
         bottom: 139px
         right: -104px
         filter: drop-shadow(0px 21px 34px rgba(0, 0, 0, 0.06))
-        animation: bubble 0.5s 3s both
+        &.animated
+            animation: bubble 0.6s 4s both
     &-3
         bottom: 95px
         right: -169px
         z-index: 49
-        animation: bubble 0.5s 1.5s both
+        &.animated
+            animation: bubble 0.6s 1.6s both
     &-4
         bottom: 107px
         left: -183px
-        animation: bubble 0.5s 2.5s both
+        &.animated
+            animation: bubble 0.6s 3.2s both
     &-5
         top: 109px
         right: -235px
-        animation: bubble 0.5s 2s both
+        &.animated
+            animation: bubble 0.6s 2.4s both
 
 @media(max-width: 1279px)
     .bubble
@@ -528,10 +539,14 @@ br
         margin-bottom: 64px
     &__title
         min-width: 535px
+        &.animated
+            animation: bottom-top 0.8s both
     &__text
         max-width: 298px
         line-height: 24px
         color: $gray-dark
+        &.animated
+            animation: bottom-top 0.8s both
         + .advantages__text
             margin-left: 5px
     &__text-icon
@@ -563,6 +578,8 @@ br
         flex: 1 1 25%
         padding: 20px
         border-radius: 24px
+        &.animated
+            animation: bottom-top 0.8s both
         &:nth-child(1)
             background-color: $blue
         &:nth-child(2)
@@ -661,15 +678,21 @@ br
         color: $white
         border-radius: 100px
         background-color: $blue
+        &.animated
+            animation: bottom-top 0.8s both
     &__title
         max-width: 586px
         margin-bottom: 16px
         text-align: center
+        &.animated
+            animation: bottom-top 0.8s both
     &__subtitle
         max-width: 463px
         margin-bottom: 64px
         color: $gray-dark
         text-align: center
+        &.animated
+            animation: bottom-top 0.8s both
     &__cards
         display: flex
         flex-wrap: wrap
@@ -687,6 +710,8 @@ br
         background-repeat: no-repeat
         background-position: 117% 37%
         transition: all 0.5s ease-out
+        &.animated
+            animation: bottom-top 0.8s both
         @media(any-hover:hover)
         &:hover
             background-position: 96% 37%
@@ -1975,7 +2000,7 @@ br
             height: 40px
 
 // Анимация
-@keyframes home-body
+@keyframes bottom-top
     0%
         transform: translateY(10%)
         opacity: 0
