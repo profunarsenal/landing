@@ -254,6 +254,12 @@ br {
 .button.icon-right.small {
   padding: 12px 20px 12px 24px;
 }
+@media (any-hover: hover) {
+  .button.icon-right:hover svg {
+    -webkit-animation: shake 0.3s linear both;
+            animation: shake 0.3s linear both;
+  }
+}
 .button.flare::after {
   content: "";
   position: absolute;
@@ -3431,6 +3437,42 @@ br {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
   }
 }
 .br {

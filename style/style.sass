@@ -105,6 +105,9 @@ br
         margin: 0 auto
         &.small
             padding: 12px 20px 12px 24px
+        @media(any-hover:hover)
+            &:hover svg
+                animation: shake 0.3s linear both
     &.flare
         &::after
             content: ''
@@ -2174,6 +2177,16 @@ br
         transform: rotate(0deg)
     100%
         transform: rotate(360deg)
+
+@keyframes shake
+    0%
+        transform: translateX(0)
+    25%
+        transform: translateX(6px)
+    50%
+        transform: translateX(0px)
+    100%
+        transform: translateX(6px)
 
 // Переносы
 .br
