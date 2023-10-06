@@ -861,6 +861,12 @@ br
     &__item
         flex: 1 1 28%
         padding-top: 8px
+        @media(any-hover:hover)
+            &:hover
+                .needs__item-icon
+                    transform: scale(1.1)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
         &.animated
             animation: bottom-top 0.8s both
     &__item-icon
@@ -874,11 +880,6 @@ br
         border-radius: 20px
         background-color: $white
         transition: all 0.3s ease
-        @media(any-hover:hover)
-            &:hover
-                transform: scale(1.1)
-                &::after
-                    transform: translate(-50%, -50%) rotate(-45deg)
         &::after
             content: ''
             position: absolute
@@ -955,7 +956,7 @@ br
         text-align: center
         margin-bottom: 56px
         &.animated
-            animation: bottom-top 0.8s both
+            animation: bottom-top-long 0.8s both
     &__cards
         display: flex
         align-items: center
@@ -1264,7 +1265,9 @@ br
         @media(any-hover:hover)
             &:hover
                 &::after
-                    transform: scale(1.03) translateY(-5px)
+                    transform: scale(1.02)
+                .channels__card-icon
+                    transform: scale(1.15)
         &:nth-child(1)
             background-color: $blue
         &:nth-child(2)
@@ -1314,6 +1317,7 @@ br
         z-index: 3
         top: -16px
         left: 20px
+        transition: all 0.3s ease
         &.icon-2
             left: 43px
             z-index: 2
@@ -1425,6 +1429,8 @@ br
         display: flex
         flex-direction: column
         gap: 12px
+        &.animated
+            animation: bottom-top 0.8s both
         &:nth-child(1)
             .payments__item:nth-child(3)
                 height: 196px
@@ -1455,10 +1461,8 @@ br
         @media(any-hover:hover)
             &:hover
                 &::after
-                    transform: scale(1.03)
+                    transform: scale(1.02)
                     background-color: rgba($gray-light, 0.4)
-        &.animated
-            animation: bottom-top 0.8s both
     &__systems
         position: relative
         z-index: 2
@@ -2132,6 +2136,14 @@ br
 @keyframes bottom-top
     0%
         transform: translateY(10%)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes bottom-top-long
+    0%
+        transform: translateY(30%)
         opacity: 0
     100%
         transform: translateY(0)

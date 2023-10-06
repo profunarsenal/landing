@@ -1336,6 +1336,16 @@ br {
           flex: 1 1 28%;
   padding-top: 8px;
 }
+@media (any-hover: hover) {
+  .needs__item:hover .needs__item-icon {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .needs__item:hover .needs__item-icon::after {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
 .needs__item.animated {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
@@ -1358,16 +1368,6 @@ br {
   background-color: #FFFFFF;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-@media (any-hover: hover) {
-  .needs__item-icon:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  .needs__item-icon:hover::after {
-    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-            transform: translate(-50%, -50%) rotate(-45deg);
-  }
 }
 .needs__item-icon::after {
   content: "";
@@ -1480,8 +1480,8 @@ br {
   margin-bottom: 56px;
 }
 .work__payments.animated {
-  -webkit-animation: bottom-top 0.8s both;
-          animation: bottom-top 0.8s both;
+  -webkit-animation: bottom-top-long 0.8s both;
+          animation: bottom-top-long 0.8s both;
 }
 .work__cards {
   display: -webkit-box;
@@ -1913,8 +1913,12 @@ br {
 }
 @media (any-hover: hover) {
   .channels__card:hover::after {
-    -webkit-transform: scale(1.03) translateY(-5px);
-            transform: scale(1.03) translateY(-5px);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  .channels__card:hover .channels__card-icon {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
   }
 }
 .channels__card:nth-child(1) {
@@ -1989,6 +1993,8 @@ br {
   z-index: 3;
   top: -16px;
   left: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .channels__card-icon.icon-2 {
   left: 43px;
@@ -2170,6 +2176,10 @@ br {
           flex-direction: column;
   gap: 12px;
 }
+.payments__column.animated {
+  -webkit-animation: bottom-top 0.8s both;
+          animation: bottom-top 0.8s both;
+}
 .payments__column:nth-child(1) .payments__item:nth-child(3) {
   height: 196px;
 }
@@ -2209,14 +2219,10 @@ br {
 }
 @media (any-hover: hover) {
   .payments__item:hover::after {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
     background-color: rgba(229, 230, 232, 0.4);
   }
-}
-.payments__item.animated {
-  -webkit-animation: bottom-top 0.8s both;
-          animation: bottom-top 0.8s both;
 }
 .payments__systems {
   position: relative;
@@ -3315,6 +3321,30 @@ br {
   0% {
     -webkit-transform: translateY(10%);
             transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bottom-top-long {
+  0% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bottom-top-long {
+  0% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
     opacity: 0;
   }
   100% {
