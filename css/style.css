@@ -190,8 +190,10 @@ br {
   background-color: #1BD1D5;
   color: #FFFFFF;
 }
-.button.primary:hover {
-  background-color: rgba(27, 209, 213, 0.8);
+@media (any-hover: hover) {
+  .button.primary:hover {
+    background-color: rgba(27, 209, 213, 0.8);
+  }
 }
 .button.primary:active {
   background-color: rgba(27, 209, 213, 0.8);
@@ -203,8 +205,10 @@ br {
   background-color: #42B8EB;
   color: #FFFFFF;
 }
-.button.secondary:hover {
-  background-color: rgba(66, 184, 235, 0.8);
+@media (any-hover: hover) {
+  .button.secondary:hover {
+    background-color: rgba(66, 184, 235, 0.8);
+  }
 }
 .button.secondary:active {
   background-color: rgba(66, 184, 235, 0.8);
@@ -217,8 +221,10 @@ br {
   border: 1px solid #3252FC;
   background-color: rgba(50, 82, 252, 0.04);
 }
-.button.tertiary:hover {
-  background-color: rgba(50, 82, 252, 0.12);
+@media (any-hover: hover) {
+  .button.tertiary:hover {
+    background-color: rgba(50, 82, 252, 0.12);
+  }
 }
 .button.tertiary:active {
   background-color: rgba(50, 82, 252, 0.12);
@@ -393,26 +399,32 @@ br {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.link-chat:hover {
-  background-color: rgba(27, 209, 213, 0.12);
+@media (any-hover: hover) {
+  .link-chat:hover {
+    background-color: rgba(27, 209, 213, 0.12);
+  }
+  .link-chat:hover svg {
+    fill: #1BD1D5;
+    fill-opacity: 1;
+  }
 }
-.link-chat:hover svg {
-  fill: #1BD1D5;
-  fill-opacity: 1;
+@media (any-hover: hover) {
+  .link-mail:hover {
+    background-color: rgba(100, 40, 250, 0.12);
+  }
+  .link-mail:hover svg {
+    fill: #6428FA;
+    fill-opacity: 1;
+  }
 }
-.link-mail:hover {
-  background-color: rgba(100, 40, 250, 0.12);
-}
-.link-mail:hover svg {
-  fill: #6428FA;
-  fill-opacity: 1;
-}
-.link-telegram:hover {
-  background-color: rgba(66, 184, 235, 0.12);
-}
-.link-telegram:hover svg {
-  fill: #42B8EB;
-  fill-opacity: 1;
+@media (any-hover: hover) {
+  .link-telegram:hover {
+    background-color: rgba(66, 184, 235, 0.12);
+  }
+  .link-telegram:hover svg {
+    fill: #42B8EB;
+    fill-opacity: 1;
+  }
 }
 
 .spinner-wrapper {
@@ -520,8 +532,10 @@ br {
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.navigation__link:hover {
-  color: #3252FC;
+@media (any-hover: hover) {
+  .navigation__link:hover {
+    color: #3252FC;
+  }
 }
 .navigation__button {
   display: none;
@@ -1148,9 +1162,6 @@ br {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
 }
-.projects__card:hover {
-  background-position: 96% 37%;
-}
 .projects__card:nth-child(1) {
   background-image: url("../assets/img/background/up-graph.svg");
 }
@@ -1177,6 +1188,11 @@ br {
 }
 .projects__card:nth-child(9) {
   background-image: url("../assets/img/background/chart.svg");
+}
+@media (any-hover: hover) {
+  .projects__card:hover {
+    background-position: 96% 37%;
+  }
 }
 .projects__card-number {
   display: -webkit-box;
@@ -1340,6 +1356,18 @@ br {
   margin: 0 auto;
   border-radius: 20px;
   background-color: #FFFFFF;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (any-hover: hover) {
+  .needs__item-icon:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .needs__item-icon:hover::after {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 .needs__item-icon::after {
   content: "";
@@ -1352,6 +1380,8 @@ br {
   border-radius: 20px;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .needs__item-title {
   margin-top: 24px;
@@ -1865,9 +1895,27 @@ br {
   border-radius: 24px;
   background-color: #E5E6E8;
 }
+.channels__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: inherit;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .channels__card.animated {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
+}
+@media (any-hover: hover) {
+  .channels__card:hover::after {
+    -webkit-transform: scale(1.03) translateY(-5px);
+            transform: scale(1.03) translateY(-5px);
+  }
 }
 .channels__card:nth-child(1) {
   background-color: #3252FC;
@@ -1897,6 +1945,8 @@ br {
   min-width: 124px;
 }
 .channels__card-title {
+  position: relative;
+  z-index: 2;
   margin-bottom: 32px;
   color: #FFFFFF;
   font-family: "RF Dewi Condensed";
@@ -1906,6 +1956,8 @@ br {
   letter-spacing: -0.56px;
 }
 .channels__card-items {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2128,6 +2180,7 @@ br {
   height: 352px;
 }
 .payments__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2140,15 +2193,34 @@ br {
           justify-content: space-between;
   height: 144px;
   padding: 20px;
+}
+.payments__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 24px;
-  border: 0.5px solid #E5E6E8;
   background-color: rgba(229, 230, 232, 0.2);
+  border: 0.5px solid #E5E6E8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (any-hover: hover) {
+  .payments__item:hover::after {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    background-color: rgba(229, 230, 232, 0.4);
+  }
 }
 .payments__item.animated {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
 }
 .payments__systems {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2159,6 +2231,8 @@ br {
   gap: 20px;
 }
 .payments__row {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3087,13 +3161,15 @@ br {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.footer__navigation-link:hover {
-  color: #3252FC;
-}
-.footer__navigation-link:hover .footer__navigation-icon {
-  opacity: 1;
-  visibility: visible;
-  right: -30px;
+@media (any-hover: hover) {
+  .footer__navigation-link:hover {
+    color: #3252FC;
+  }
+  .footer__navigation-link:hover .footer__navigation-icon {
+    opacity: 1;
+    visibility: visible;
+    right: -30px;
+  }
 }
 .footer__navigation-icon {
   position: absolute;
