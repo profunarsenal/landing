@@ -1671,10 +1671,22 @@ br {
   border-radius: 32px;
   border: 1px solid rgba(138, 142, 152, 0.2);
   background-color: rgba(229, 230, 232, 0.5);
+  overflow: hidden;
 }
 .example__video.animated {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
+}
+.example__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.example__video video.play {
+  display: block;
 }
 .example__video-button {
   position: absolute;
@@ -1683,6 +1695,9 @@ br {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: transparent;
+}
+.example__video-button.play {
+  display: none;
 }
 .example__icon-play {
   -webkit-transition: all 0.3s ease;
@@ -1756,6 +1771,18 @@ br {
     border-radius: 32px;
     border: 1px solid rgba(138, 142, 152, 0.2);
     background-color: rgba(229, 230, 232, 0.5);
+    overflow: hidden;
+  }
+  .example__tab-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .example__tab-video video.play {
+    display: block;
   }
   .example__video {
     display: none;
