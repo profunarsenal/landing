@@ -1679,14 +1679,14 @@ br {
 }
 .example__video video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  display: none;
-}
-.example__video video.play {
-  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-clip-path: inset(1px 1px);
+          clip-path: inset(1px 1px);
 }
 .example__video-button {
   position: absolute;
@@ -1744,16 +1744,14 @@ br {
     position: relative;
     height: 420px;
     width: 100%;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 24px auto 16px;
   }
   .example__tab-video {
     position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1762,12 +1760,7 @@ br {
             justify-content: center;
     width: 0;
     height: 0;
-    opacity: 0;
-    visibility: hidden;
     margin: 0 auto;
-    pointer-events: none;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
     border-radius: 32px;
     border: 1px solid rgba(138, 142, 152, 0.2);
     background-color: rgba(229, 230, 232, 0.5);
@@ -1775,14 +1768,14 @@ br {
   }
   .example__tab-video video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    display: none;
-  }
-  .example__tab-video video.play {
-    display: block;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-clip-path: inset(1px 1px);
+            clip-path: inset(1px 1px);
   }
   .example__video {
     display: none;
