@@ -1,5 +1,6 @@
 export const animationModule = () => {
     const spinner = document.querySelector('.spinner');
+    const buttonsWithArrow = document.querySelectorAll('.icon-right');
 
     window.onload = () => {
         spinner.style.display = 'none';
@@ -27,4 +28,18 @@ export const animationModule = () => {
         targetElements.forEach(elem => observer.observe(elem));
         startedScreenElements.forEach(elem => elem.classList.add('animated'));
     };
+
+    buttonsWithArrow.forEach((button) => {
+        const icon = button.querySelector('svg');
+
+        button.addEventListener('mouseover', () => {
+            icon.classList.add('shake-in');
+            icon.classList.remove('shake-out');
+        });
+
+        button.addEventListener('mouseout', () => {
+            icon.classList.remove('shake-in');
+            icon.classList.add('shake-out');
+        });
+    });
 };

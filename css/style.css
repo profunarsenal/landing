@@ -254,11 +254,13 @@ br {
 .button.icon-right.small {
   padding: 12px 20px 12px 24px;
 }
-@media (any-hover: hover) {
-  .button.icon-right:hover svg {
-    -webkit-animation: shake 0.3s linear both;
-            animation: shake 0.3s linear both;
-  }
+.button.icon-right svg.shake-in {
+  -webkit-animation: shake-in 0.6s linear both;
+          animation: shake-in 0.6s linear both;
+}
+.button.icon-right svg.shake-out {
+  -webkit-animation: shake-out 0.6s linear both;
+          animation: shake-out 0.6s linear both;
 }
 .button.flare::after {
   content: "";
@@ -3459,7 +3461,7 @@ br {
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes shake {
+@-webkit-keyframes shake-in {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -3469,15 +3471,15 @@ br {
             transform: translateX(6px);
   }
   50% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
   }
   100% {
     -webkit-transform: translateX(6px);
             transform: translateX(6px);
   }
 }
-@keyframes shake {
+@keyframes shake-in {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -3487,12 +3489,48 @@ br {
             transform: translateX(6px);
   }
   50% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
   }
   100% {
     -webkit-transform: translateX(6px);
             transform: translateX(6px);
+  }
+}
+@-webkit-keyframes shake-out {
+  0% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes shake-out {
+  0% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 .br {
