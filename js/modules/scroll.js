@@ -6,18 +6,14 @@ export const scrollModule = () => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
 
-            const HEADER_FIXED_SCREEN_WIDTH = 1022;
-            const isHeaderFixed = window.screen.width <= HEADER_FIXED_SCREEN_WIDTH;
-            const hasScrollClass = header.classList.contains('scroll');
             const id = link.getAttribute('href');
             const section = document.querySelector(id);
             const burgerButton = document.querySelector('.burger');
             const navigation = document.querySelector('.navigation');
 
             if (section) {
-                const topOffset = hasScrollClass ? header.offsetHeight : header.offsetHeight * 2;
                 const sectionPosition = section.getBoundingClientRect().top;
-                const offsetPosition = isHeaderFixed ? sectionPosition - topOffset : sectionPosition;
+                const offsetPosition = sectionPosition - header.offsetHeight;
 
                 window.scrollBy({
                     top: offsetPosition,
