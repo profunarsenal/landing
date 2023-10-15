@@ -1,11 +1,11 @@
 export const animationModule = () => {
     const wrapper = document.getElementById('wrapper');
-    const spinner = document.querySelector('.spinner');
+    const loader = document.querySelector('.loader-wrapper');
     const buttonsWithArrow = document.querySelectorAll('.icon-right');
 
     window.onload = () => {
         wrapper.style.display = 'flex';
-        spinner.style.display = 'none';
+        loader.style.display = 'none';
 
         const startedScreenElements = document.querySelectorAll('.home .anim');
         const targetElements = document.querySelectorAll('.anim');
