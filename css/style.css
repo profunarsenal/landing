@@ -298,6 +298,7 @@ br {
 .button.more span {
   font-size: 20px;
   line-height: 32px;
+  font-weight: 400;
   white-space: nowrap;
 }
 
