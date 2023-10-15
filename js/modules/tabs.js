@@ -2,6 +2,7 @@ export const tabsModule = () => {
     const tabsButtons = document.querySelectorAll('.example__tab-button');
     const desktopPlayButton = document.querySelector('.example__video .example__video-button');
     const mobilePlayButtons = document.querySelectorAll('.example__tab .example__video-button');
+    const buttonsMore = document.querySelectorAll('.more');
     const allButtons = [desktopPlayButton, ...mobilePlayButtons];
     
     const createVideo = (button) => {
@@ -19,6 +20,11 @@ export const tabsModule = () => {
         videoBlock.insertBefore(video, button);
         button.classList.add('play');
         video.play();
+    };
+
+    const loadMore = (button) => {
+        const collapsedBlock = button.closest('.collapsed');
+        collapsedBlock.classList.remove('collapsed');
     };
 
     tabsButtons.forEach((tabButton) => {
@@ -46,4 +52,9 @@ export const tabsModule = () => {
             createVideo(button);
         });
     });
+
+    buttonsMore.forEach((button) => {
+        button.addEventListener('click', () => loadMore(button));
+    });
+    
 };
