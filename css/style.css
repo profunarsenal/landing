@@ -761,6 +761,11 @@ br {
   display: none;
 }
 
+@media (min-width: 1440px) {
+  .navigation__list {
+    gap: 56px;
+  }
+}
 @media (max-width: 1023px) {
   .navigation {
     position: absolute;
