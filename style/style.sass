@@ -304,11 +304,14 @@ br
     opacity: 0
     visibility: hidden
     pointer-events: none
-    transition: opacity 0.4s ease
     &.open
         opacity: 1
         visibility: visible
         pointer-events: all
+        .modal__overlay
+            opacity: 1
+            visibility: visible
+            pointer-events: all
         .modal__wrapper
             transform: translateY(0)
         .modal__close
@@ -321,6 +324,10 @@ br
         width: 101%
         height: 101%
         background: rgba(0, 0, 0, 0.7)
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
+        transition: opacity 0.4s ease
     &__wrapper
         position: relative
         z-index: 992
@@ -329,7 +336,7 @@ br
         background-color: $white
         box-shadow: 0px 21px 34px 0px rgba(0, 0, 0, 0.06)
         transform: translateY(-20px)
-        transition: transform 0.5s ease
+        transition: transform 0.4s ease
     &__close
         position: absolute
         z-index: 992
@@ -343,7 +350,7 @@ br
         border-radius: 100%
         background-color: $white
         transform: translateX(20px)
-        transition: transform 0.5s ease
+        transition: transform 0.4s ease
         @media(any-hover:hover)
             &:hover
                 svg
