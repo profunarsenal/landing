@@ -112,9 +112,9 @@ br
             padding: 12px 20px 12px 24px
         svg
             &.shake-in
-                animation: shake-in 0.6s linear both
+                animation: shake-in 0.2s linear both
             &.shake-out
-                animation: shake-out 0.6s linear both
+                animation: shake-out 0.2s linear both
     &.flare
         &::after
             content: ''
@@ -2443,20 +2443,12 @@ br
 @keyframes shake-in
     0%
         transform: translateX(0)
-    25%
-        transform: translateX(6px)
-    50%
-        transform: translateX(2px)
     100%
         transform: translateX(6px)
 
 @keyframes shake-out
     0%
-        transform: translateX(5px)
-    25%
-        transform: translateX(-2px)
-    50%
-        transform: translateX(2px)
+        transform: translateX(6px)
     100%
         transform: translateX(0px)
 
@@ -2509,4 +2501,3 @@ br
     -webkit-touch-callout: none
     -webkit-text-size-adjust: none
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-    -webkit-user-select: none
