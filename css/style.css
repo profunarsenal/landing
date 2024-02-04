@@ -325,7 +325,7 @@ br {
   border-radius: 40px;
   outline: 1px solid rgba(27, 209, 213, 0.12);
   background-color: rgba(27, 209, 213, 0.08);
-  background-image: url("../assets/img/banner/background.svg");
+  background-image: url("../assets/img/background.svg");
   background-repeat: no-repeat;
   background-position: 114% 77%;
 }
@@ -347,6 +347,10 @@ br {
 .banner__text.animated {
   -webkit-animation: bottom-top 0.8s both;
           animation: bottom-top 0.8s both;
+}
+.banner__image img {
+  width: 272px;
+  height: 272px;
 }
 .banner__image.animated {
   -webkit-animation: bottom-top 0.8s both;
